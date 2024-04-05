@@ -5,12 +5,14 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 import java.math.BigInteger;
+import java.util.Arrays;
+
 import org.junit.jupiter.api.Test;
 
 /**
  * Tests of Sorter objects.
  *
- * @author Your Name
+ * @author Connor Heagy
  */
 public class SortTester {
 
@@ -18,7 +20,7 @@ public class SortTester {
   // | Globals |
   // +---------+
 
-  Sorter sorter;
+  Sorter sorter = new Quicksort();
 
   // +-------+-------------------------------------------------------
   // | Tests |
@@ -44,5 +46,4 @@ public class SortTester {
     sorter.sort(original, (x, y) -> x.compareTo(y));
     assertArrayEquals(original, expected);
   } // orderedStringTest
-
 } // class SortTester
